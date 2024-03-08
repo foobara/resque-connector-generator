@@ -6,7 +6,7 @@ module Foobara
       class WriteResqueConnectorToDisk < Foobara::Generators::WriteGeneratedFilesToDisk
         class << self
           def generator_key
-            "resque_connector"
+            "resque-connector"
           end
         end
 
