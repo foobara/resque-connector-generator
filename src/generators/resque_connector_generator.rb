@@ -25,17 +25,6 @@ module Foobara
             "#{__dir__}/../../templates"
             # :nocov:
           end
-
-          # TODO: promote this up to base project
-          def ==(other)
-            # :nocov:
-            self.class == other.class && resque_connector_config == other.resque_connector_config
-            # :nocov:
-          end
-
-          def hash
-            resque_connector_config.hash
-          end
         end
       end
     end
