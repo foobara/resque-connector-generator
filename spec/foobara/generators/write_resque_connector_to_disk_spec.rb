@@ -45,6 +45,18 @@ RSpec.describe Foobara::Generators::ResqueConnectorGenerator::WriteResqueConnect
         command.paths_to_source_code["Gemfile"]
       ).to include('gem "foobara-resque-connector", github: "foobara/resque-connector"')
     end
+
+    context "when there's no Procfile" do
+      before do
+        FileUtils.rm "#{output_directory}/Procfile"
+      end
+
+      it "creates one" do
+        expect(outcome).to be_success
+
+        expect(command.paths_to_source_code.keys).to include("Procfile")
+      end
+    end
   end
 
   describe "#output_directory" do
