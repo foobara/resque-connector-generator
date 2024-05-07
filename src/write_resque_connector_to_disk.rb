@@ -13,7 +13,7 @@ module Foobara
         depends_on GenerateResqueConnector
 
         inputs do
-          resque_connector_config ResqueConnectorConfig, :required
+          resque_connector_config ResqueConnectorConfig, default: ResqueConnectorConfig.new
           # TODO: should be able to delete this and inherit it
           output_directory :string
         end
