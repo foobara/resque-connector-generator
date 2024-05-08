@@ -35,7 +35,7 @@ RSpec.describe Foobara::Generators::ResqueConnectorGenerator::WriteResqueConnect
     it "contains base files" do
       expect(outcome).to be_success
 
-      expect(command.paths_to_source_code.keys).to include("boot/resque.rb")
+      expect(command.paths_to_source_code.keys).to include("boot/async.rb")
     end
 
     it "updates the Gemfile" do
