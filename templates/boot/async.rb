@@ -12,6 +12,4 @@ Resque.redis = Redis.new(url: redis_url)
 
 resque_connector = Foobara::CommandConnectors::ResqueConnector.new
 
-# resque_connector.connect(SomeCommandOrDomainOrOrganization)
-
-RESQUE_CONNECTOR = resque_connector
+resque_connector.connect(SomeCommandOrDomainOrOrganization)

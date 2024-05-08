@@ -17,6 +17,12 @@ RSpec.describe Foobara::Generators::ResqueConnectorGenerator::GenerateResqueConn
   it "generates a resque_connector" do
     expect(outcome).to be_success
 
-    expect(result.keys).to contain_exactly("boot/async.rb", "Procfile", "Gemfile", "test-org-test-domain.gemspec")
+    expect(result.keys).to contain_exactly(
+      "boot/async.rb",
+      "Procfile",
+      "Gemfile",
+      "test-org-test-domain.gemspec",
+      "Rakefile"
+    )
   end
 end

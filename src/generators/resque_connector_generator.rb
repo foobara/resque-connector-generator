@@ -10,6 +10,7 @@ module Foobara
                 [
                   Generators::GemfileGenerator,
                   Generators::GemspecGenerator,
+                  Generators::RakefileGenerator,
                   Generators::ProcfileGenerator
                 ]
               else
