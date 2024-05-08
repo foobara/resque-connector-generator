@@ -6,7 +6,7 @@ module Foobara
         # and modifying it.
         class GemspecGenerator < ResqueConnectorGenerator
           def applicable?
-            gemspec_contents !~ /^\sspec.add_dependency\s*['"]resque['"]/
+            gemspec_contents !~ /^\s*spec.add_dependency\s*['"]resque['"]/
           end
 
           def template_path
