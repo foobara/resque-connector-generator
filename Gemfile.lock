@@ -14,7 +14,8 @@ GEM
     coderay (1.1.3)
     diff-lcs (1.5.1)
     docile (1.4.1)
-    ffi (1.17.1-x86_64-linux-gnu)
+    ffi (1.17.4-arm64-darwin)
+    ffi (1.17.4-x86_64-linux-gnu)
     foobara (0.0.47)
       bigdecimal
       foobara-util
@@ -119,6 +120,7 @@ GEM
     unicode-emoji (4.0.4)
 
 PLATFORMS
+  arm64-darwin-25
   x86_64-linux
 
 DEPENDENCIES
