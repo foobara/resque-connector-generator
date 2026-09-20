@@ -26,9 +26,9 @@ module Foobara
               "#{match.pre_match}\n#{new_entry}\n#{match}#{match.post_match}"
             else
               # TODO: maybe print a warning and return the original gemspec
-              # :nocov:
+              # simplecov:disable
               raise "Not sure how to inject #{name.inspect} into the gemspec's executables"
-              # :nocov:
+              # simplecov:enable
             end
           end
 

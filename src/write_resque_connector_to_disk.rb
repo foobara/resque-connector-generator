@@ -50,9 +50,9 @@ module Foobara
           Open3.popen3("bundle exec rubocop --no-server -A") do |_stdin, _stdout, stderr, wait_thr|
             exit_status = wait_thr.value
             unless exit_status.success?
-              # :nocov:
+              # simplecov:disable
               warn "WARNING: could not rubocop -A. #{stderr.read}"
-              # :nocov:
+              # simplecov:enable
             end
           end
         end
@@ -66,9 +66,9 @@ module Foobara
               exit_status = wait_thr.value
 
               unless exit_status.success?
-                # :nocov:
+                # simplecov:disable
                 warn "WARNING: could not #{cmd}\n#{stderr.read}"
-                # :nocov:
+                # simplecov:enable
               end
             end
           end
